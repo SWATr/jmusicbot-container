@@ -7,8 +7,7 @@ RUN mkdir -p /bot/config
 
 ENV JVERSION 0.3.9
 ADD https://github.com/jagrosh/MusicBot/releases/download/$JVERSION/JMusicBot-$JVERSION.jar /bot/JMusicBot.jar
-ADD https://github.com/jagrosh/MusicBot/releases/download/0.2.9/config.txt /bot/config/config.txt
-
+RUN chmod +x /bot/JMusicBot.jar
 
 COPY ./docker-entrypoint.sh /bot
 RUN chmod +x /bot/docker-entrypoint.sh
