@@ -5,7 +5,7 @@ RUN mkdir -p /bot/config
 #ENV JVERSION 0.4.0-on-lavaplayer-youtube-source-1.0.4
 #ADD https://github.com/MichailiK/MusicBot/releases/download/$JVERSION/JMusicBot-$JVERSION.jar /bot/JMusicBot.jar
 
-ENV JVERSION 0.4.1
+ENV JVERSION 0.4.2
 ADD https://github.com/jagrosh/MusicBot/releases/download/$JVERSION/JMusicBot-$JVERSION.jar /bot/JMusicBot.jar
 
 COPY ./docker-entrypoint.sh /bot
