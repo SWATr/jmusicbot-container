@@ -7,3 +7,4 @@ services:
     restart: unless-stopped
     volumes:
      - ./config:/bot/config
+     - /var/run/docker.sock:/var/run/docker.sock
