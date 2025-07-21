@@ -1,6 +1,11 @@
 FROM openjdk:11-jre-slim
 
 RUN mkdir -p /bot/config
+RUN apt-get update && \
+    apt-get install -y \
+    curl
+
+RUN curl -fsSL https://get.docker.com | sh
 
 #ENV JVERSION 0.4.3
 #ADD https://github.com/jagrosh/MusicBot/releases/download/$JVERSION/JMusicBot-$JVERSION.jar /bot/JMusicBot.jar
