@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM eclipse-temurin:25
 
 RUN mkdir -p /bot/config
 RUN apt-get update && \
