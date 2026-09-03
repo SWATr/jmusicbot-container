@@ -12,9 +12,9 @@ RUN curl -fsSL https://get.docker.com | sh
 
 ADD https://github.com/347fabricio/MusicBot/releases/tag/v0.7.0-beta.2/JMusicBot-0.7.0-All.jar .jar /bot/JMusicBot.jar
 
-COPY ./docker-entrypoint.sh /app
+COPY ./docker-entrypoint.sh /bot
 RUN chmod +x /bot/docker-entrypoint.sh
 
 VOLUME /bot/
 
-ENTRYPOINT ["/app/docker-entrypoint.sh"]
+ENTRYPOINT ["/bot/docker-entrypoint.sh"]
